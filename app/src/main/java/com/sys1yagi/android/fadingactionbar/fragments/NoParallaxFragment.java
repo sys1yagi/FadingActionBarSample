@@ -24,11 +24,6 @@ public class NoParallaxFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = mFadingHelper.createView(inflater);
@@ -52,4 +47,5 @@ public class NoParallaxFragment extends Fragment {
                 .contentLayout(R.layout.activity_main);
         mFadingHelper.initActionBar(activity);
     }
+
 }
