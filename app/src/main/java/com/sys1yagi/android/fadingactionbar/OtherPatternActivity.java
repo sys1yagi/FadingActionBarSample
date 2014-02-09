@@ -1,5 +1,8 @@
 package com.sys1yagi.android.fadingactionbar;
 
+import com.sys1yagi.android.fadingactionbar.fragments.NoParallaxFragment;
+import com.sys1yagi.android.fadingactionbar.tools.ActionBarController;
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -26,22 +29,8 @@ public class OtherPatternActivity extends ActionBarActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, NoParallaxFragment.newInstance())
                     .commit();
         }
     }
-
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_other_pattern, container, false);
-            return rootView;
-        }
-    }
-
 }

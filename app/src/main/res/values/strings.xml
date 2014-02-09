@@ -3,7 +3,9 @@
 
     <string name="app_name">FadingActionBarSample</string>
     <string name="activity_main_title">Fisheye sky</string>
+    <string name="fragment_no_parallax">Fisheye sky No Parallax</string>
     <string name="action_others">Others</string>
     <string name="title_activity_other_pattern">OtherPatternActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
