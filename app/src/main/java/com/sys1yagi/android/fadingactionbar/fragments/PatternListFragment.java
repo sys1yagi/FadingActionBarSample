@@ -24,7 +24,7 @@ public class PatternListFragment extends Fragment {
 
     enum ListItem {
         NO_PARALLAX("No Parallax", NoParallaxFragment.newInstance()),
-        PARALLAX("Parallax", NoParallaxFragment.newInstance());
+        HEADER_OVERLAY("Header Overlay", HeaderOverlayFragment.newInstance());
 
         private String mTitle;
 
@@ -35,8 +35,6 @@ public class PatternListFragment extends Fragment {
             mFragment = fragment;
         }
     }
-
-    private FadingActionBarHelper mFadingHelper;
 
     public PatternListFragment() {
     }
