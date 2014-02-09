@@ -17,8 +17,9 @@ public class MainActivity extends ActionBarActivity {
                 .actionBarBackground(android.R.color.holo_blue_light)
                 .headerLayout(R.layout.header_main)
                 .contentLayout(R.layout.activity_main);
-        setContentView(helper.createView(this));
         helper.initActionBar(this);
+        setContentView(helper.createView(this));
+
         getSupportActionBar().setTitle(R.string.activity_main_title);
 
     }

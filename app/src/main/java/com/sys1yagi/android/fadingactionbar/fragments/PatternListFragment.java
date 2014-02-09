@@ -1,6 +1,5 @@
 package com.sys1yagi.android.fadingactionbar.fragments;
 
-import com.manuelpeinado.fadingactionbar.extras.actionbarcompat.FadingActionBarHelper;
 import com.sys1yagi.android.fadingactionbar.R;
 import com.sys1yagi.android.fadingactionbar.tools.ActionBarController;
 import com.sys1yagi.android.fadingactionbar.tools.FragmentTransitionController;
