@@ -15,13 +15,13 @@ public class MainActivity extends ActionBarActivity {
 
         FadingActionBarHelper helper = new FadingActionBarHelper()
                 .actionBarBackground(android.R.color.holo_blue_light)
-                .headerLayout(R.layout.header)
+                .headerLayout(R.layout.header_main)
                 .contentLayout(R.layout.activity_main);
         setContentView(helper.createView(this));
         helper.initActionBar(this);
-        getSupportActionBar().setTitle("Fisheye sky");
-    }
+        getSupportActionBar().setTitle(R.string.activity_main_title);
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -33,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            startActivity(OtherPatternActivity.createIntent(this));
             return true;
         }
         return super.onOptionsItemSelected(item);

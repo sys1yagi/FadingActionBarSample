@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">FadingActionBarSample</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="activity_main_title">Fisheye sky</string>
+    <string name="action_others">Others</string>
+    <string name="title_activity_other_pattern">OtherPatternActivity</string>
 
 </resources>

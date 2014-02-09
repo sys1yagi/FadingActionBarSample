@@ -1,6 +1,6 @@
 <ImageView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:src="@drawable/photo"
+        android:src="@drawable/main_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"

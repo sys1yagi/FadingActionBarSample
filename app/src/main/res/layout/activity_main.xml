@@ -10,6 +10,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_header"
             android:padding="10dp"
+            android:textStyle="bold"
             android:text="photo by"
             />
     <TextView
@@ -24,6 +25,7 @@
             android:background="@drawable/shape_header"
             android:padding="10dp"
             android:text="description"
+            android:textStyle="bold"
             />
     <TextView
             android:layout_width="match_parent"
@@ -37,6 +39,7 @@
             android:background="@drawable/shape_header"
             android:padding="10dp"
             android:text="dummy text"
+            android:textStyle="bold"
             />
     <TextView
             android:layout_width="match_parent"
