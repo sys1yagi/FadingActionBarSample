@@ -28,25 +28,6 @@ public class NoParallaxFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = mFadingHelper.createView(inflater);
-        view.findViewById(R.id.fav_image).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("moge", "click!");
-                //do something
-            }
-        });
-        view.findViewById(R.id.comment_image).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //do something
-            }
-        });
-        view.findViewById(R.id.map_image).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //do something
-            }
-        });
         return view;
     }
 
