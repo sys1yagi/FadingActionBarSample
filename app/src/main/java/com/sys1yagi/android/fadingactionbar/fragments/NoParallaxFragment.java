@@ -19,15 +19,19 @@ public class NoParallaxFragment extends Fragment {
         return fragment;
     }
 
-    private FadingActionBarHelper mFadingHelper;
-
     public NoParallaxFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View view = mFadingHelper.createView(inflater);
+        FadingActionBarHelper fadingActionBarHelper = new FadingActionBarHelper()
+                .parallax(false)
+                .actionBarBackground(android.R.color.holo_blue_light)
+                .headerLayout(R.layout.header_main)
+                .contentLayout(R.layout.activity_main);
+        fadingActionBarHelper.initActionBar(getActivity());
+        View view = fadingActionBarHelper.createView(inflater);
         return view;
     }
 
@@ -41,12 +45,7 @@ public class NoParallaxFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        mFadingHelper = new FadingActionBarHelper()
-                .parallax(false)
-                .actionBarBackground(android.R.color.holo_blue_light)
-                .headerLayout(R.layout.header_main)
-                .contentLayout(R.layout.activity_main);
-        mFadingHelper.initActionBar(activity);
+
     }
 
 }

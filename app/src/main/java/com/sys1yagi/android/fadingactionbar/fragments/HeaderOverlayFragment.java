@@ -18,15 +18,19 @@ public class HeaderOverlayFragment extends Fragment {
         return fragment;
     }
 
-    private FadingActionBarHelper mFadingHelper;
-
     public HeaderOverlayFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View view = mFadingHelper.createView(inflater);
+        FadingActionBarHelper fadingActionBarHelper = new FadingActionBarHelper()
+                .actionBarBackground(android.R.color.holo_blue_light)
+                .headerLayout(R.layout.header_main)
+                .headerOverlayLayout(R.layout.header_overlay)
+                .contentLayout(R.layout.activity_main);
+        fadingActionBarHelper.initActionBar(getActivity());
+        View view = fadingActionBarHelper.createView(inflater);
         view.findViewById(R.id.fav_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,17 +57,6 @@ public class HeaderOverlayFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         ActionBarController
                 .setActionBarTitle(getActivity(), getString(R.string.fragment_header_overlay));
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        mFadingHelper = new FadingActionBarHelper()
-                .actionBarBackground(android.R.color.holo_blue_light)
-                .headerLayout(R.layout.header_main)
-                .headerOverlayLayout(R.layout.header_overlay)
-                .contentLayout(R.layout.activity_main);
-        mFadingHelper.initActionBar(activity);
     }
 
 }
